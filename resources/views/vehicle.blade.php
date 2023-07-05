@@ -19,12 +19,36 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
 </head>
-<body>
+<body class="d-flex flex-column">
+<main class="flex-shrink-0">
 
-<div id="app">
-    <search-form></search-form>
-</div>
+
+    <section class="py-5">
+        <div class="container px-5">
+
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+
+                        <div id="app">
+                            <search-form></search-form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
 </body>
 <script src="{{mix('/js/app.js')}}"></script>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

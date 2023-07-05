@@ -2,18 +2,17 @@
     <div>
         <h1>Netwatch Global Vehicle Search</h1>
         <form @submit.prevent="searchSubmit">
-            <p>Make <span v-if="required"><span style="color: red" v-if="!make">*</span></span></p>
-            <input v-model="make" placeholder="Make">
-            <p>Model <span v-if="required"><span style="color: red" v-if="!model">*</span></span></p>
-            <input v-model="model" placeholder="Model">
-            <p>Registration <span v-if="required"><span style="color: red" v-if="!registration">*</span></span></p>
-            <input v-model="registration" placeholder="Registration">
-            <p></p>
-            <button>Search</button>
+            <label>Make <span v-if="required"><span style="color: red" v-if="!make">*</span></span></label>
+            <input class="form-control" v-model="make" placeholder="Make">
+            <label class="mt-2">Model <span v-if="required"><span style="color: red" v-if="!model">*</span></span></label>
+            <input class="form-control" v-model="model" placeholder="Model">
+            <label class="mt-2">Registration <span v-if="required"><span style="color: red" v-if="!registration">*</span></span></label>
+            <input class="form-control" v-model="registration" placeholder="Registration">
+            <button class="btn btn-primary btn-lg mt-3 mb-3 w-100">Search</button>
         </form>
         <span v-if="errors" >{{errors}}</span>
         <span v-else>
-        <table>
+        <table v-if="vehicles" class="table w-100">
             <thead>
             <th>SN</th>
             <th>Make</th>
